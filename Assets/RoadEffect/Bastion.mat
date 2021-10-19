@@ -32,9 +32,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_065fbda421f549908143b038313a4e20: 0.5
-    - Vector1_7e7982851168436ea6dcff5d99b8c8ba: 10
-    - Vector1_8e6c45b1bede4358a67013ff59274f77: 9
+    - Vector1_065fbda421f549908143b038313a4e20: 8
+    - Vector1_7e7982851168436ea6dcff5d99b8c8ba: -3
+    - Vector1_8e6c45b1bede4358a67013ff59274f77: 0.5
     m_Colors:
-    - _PlayerPos: {r: -17.885134, g: -3.7582474, b: 42.985943, a: 0}
+    - _PlayerPos: {r: 4.839766, g: -232.05724, b: 45.061413, a: 0}
+    - _Road_Direction: {r: 0, g: 0, b: 1, a: 0}
   m_BuildTextureStacks: []
