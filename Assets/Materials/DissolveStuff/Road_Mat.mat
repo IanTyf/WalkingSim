@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: SimpleColor
-  m_Shader: {fileID: -6465566751694194690, guid: b043a4a6a24e8434e9beec1fbbe2705b, type: 3}
+  m_Name: Road_Mat
+  m_Shader: {fileID: -6465566751694194690, guid: ae43c8cc9f722fa4f947fafd5f81fdfb, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -59,6 +59,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_d508821c5be04ef5bbc3da71ed48d801_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 282c38f8659986441a319d0498468a6e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -76,6 +80,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_60a69b8c139749afa44e5eeaa8a882d9: 0.16
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -96,7 +101,6 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Scale: 1
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -105,16 +109,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_c6cca54444934fe89200cf83a82bf32a: {r: 1, g: 1, b: 1, a: 0}
-    - Color_f67a9d137e3e48f7ab4bfa093b2078aa: {r: 0, g: 0, b: 0, a: 0}
+    - Color_0a27debffd2e46dbbd662b1b3650f10c: {r: 1, g: 1, b: 1, a: 0}
+    - Color_40ef0966037347998e0659b6e1fd37f9: {r: 0.7735849, g: 0.7735849, b: 0.7735849, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Direction: {r: 1, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Range: {r: 0, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &7703447154977500840
+--- !u!114 &38086912172341526
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
