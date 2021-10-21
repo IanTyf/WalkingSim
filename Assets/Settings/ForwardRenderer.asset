@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3939c170a69655947be709ebbcad25ba, type: 3}
   m_Name: Gradient
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 400
     blitMaterial: {fileID: 2100000, guid: 32f0ff3ef7af82e47966d0cae73dd95c, type: 2}

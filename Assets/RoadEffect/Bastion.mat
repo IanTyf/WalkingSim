@@ -36,6 +36,6 @@ Material:
     - Vector1_7e7982851168436ea6dcff5d99b8c8ba: -3
     - Vector1_8e6c45b1bede4358a67013ff59274f77: 0.5
     m_Colors:
-    - _PlayerPos: {r: 4.839766, g: -232.05724, b: 45.061413, a: 0}
+    - _PlayerPos: {r: 0.88176405, g: 3.0799997, b: 25.114996, a: 0}
     - _Road_Direction: {r: 0, g: 0, b: 1, a: 0}
   m_BuildTextureStacks: []
