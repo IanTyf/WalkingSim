@@ -1,0 +1,591 @@
+fileFormatVersion: 2
+guid: 476cc618779246849a3c95376d9a772b
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: DorsilFin1
+  - first:
+      1: 100002
+    second: DorsilFin2
+  - first:
+      1: 100004
+    second: DorsilFin2_end
+  - first:
+      1: 100006
+    second: Fin1.L
+  - first:
+      1: 100008
+    second: Fin1.R
+  - first:
+      1: 100010
+    second: Fin2.L
+  - first:
+      1: 100012
+    second: Fin2.R
+  - first:
+      1: 100014
+    second: Fin3.L
+  - first:
+      1: 100016
+    second: Fin3.R
+  - first:
+      1: 100018
+    second: Fin4.L
+  - first:
+      1: 100020
+    second: Fin4.L_end
+  - first:
+      1: 100022
+    second: Fin4.R
+  - first:
+      1: 100024
+    second: Fin4.R_end
+  - first:
+      1: 100026
+    second: Fins
+  - first:
+      1: 100028
+    second: Head1
+  - first:
+      1: 100030
+    second: Head2
+  - first:
+      1: 100032
+    second: Head2_end
+  - first:
+      1: 100034
+    second: Jaw1
+  - first:
+      1: 100036
+    second: Jaw2
+  - first:
+      1: 100038
+    second: Jaw2_end
+  - first:
+      1: 100040
+    second: MiddleFin1.L
+  - first:
+      1: 100042
+    second: MiddleFin1.R
+  - first:
+      1: 100044
+    second: MiddleFin2.L
+  - first:
+      1: 100046
+    second: MiddleFin2.R
+  - first:
+      1: 100048
+    second: MiddleFin3.L
+  - first:
+      1: 100050
+    second: MiddleFin3.L_end
+  - first:
+      1: 100052
+    second: MiddleFin3.R
+  - first:
+      1: 100054
+    second: MiddleFin3.R_end
+  - first:
+      1: 100056
+    second: Neck
+  - first:
+      1: 100058
+    second: RearBottomFin1
+  - first:
+      1: 100060
+    second: RearBottomFin2
+  - first:
+      1: 100062
+    second: RearBottomFin2_end
+  - first:
+      1: 100064
+    second: RearTopFin1
+  - first:
+      1: 100066
+    second: RearTopFin2
+  - first:
+      1: 100068
+    second: RearTopFin2_end
+  - first:
+      1: 100070
+    second: Spine1
+  - first:
+      1: 100072
+    second: Spine2
+  - first:
+      1: 100074
+    second: Tail1
+  - first:
+      1: 100076
+    second: Tail2
+  - first:
+      1: 100078
+    second: Tail3
+  - first:
+      1: 100080
+    second: Tail3_end
+  - first:
+      1: 100082
+    second: Walleye
+  - first:
+      1: 100084
+    second: //RootNode
+  - first:
+      1: 100086
+    second: Walleye Skeleton
+  - first:
+      4: 400000
+    second: DorsilFin1
+  - first:
+      4: 400002
+    second: DorsilFin2
+  - first:
+      4: 400004
+    second: DorsilFin2_end
+  - first:
+      4: 400006
+    second: Fin1.L
+  - first:
+      4: 400008
+    second: Fin1.R
+  - first:
+      4: 400010
+    second: Fin2.L
+  - first:
+      4: 400012
+    second: Fin2.R
+  - first:
+      4: 400014
+    second: Fin3.L
+  - first:
+      4: 400016
+    second: Fin3.R
+  - first:
+      4: 400018
+    second: Fin4.L
+  - first:
+      4: 400020
+    second: Fin4.L_end
+  - first:
+      4: 400022
+    second: Fin4.R
+  - first:
+      4: 400024
+    second: Fin4.R_end
+  - first:
+      4: 400026
+    second: Fins
+  - first:
+      4: 400028
+    second: Head1
+  - first:
+      4: 400030
+    second: Head2
+  - first:
+      4: 400032
+    second: Head2_end
+  - first:
+      4: 400034
+    second: Jaw1
+  - first:
+      4: 400036
+    second: Jaw2
+  - first:
+      4: 400038
+    second: Jaw2_end
+  - first:
+      4: 400040
+    second: MiddleFin1.L
+  - first:
+      4: 400042
+    second: MiddleFin1.R
+  - first:
+      4: 400044
+    second: MiddleFin2.L
+  - first:
+      4: 400046
+    second: MiddleFin2.R
+  - first:
+      4: 400048
+    second: MiddleFin3.L
+  - first:
+      4: 400050
+    second: MiddleFin3.L_end
+  - first:
+      4: 400052
+    second: MiddleFin3.R
+  - first:
+      4: 400054
+    second: MiddleFin3.R_end
+  - first:
+      4: 400056
+    second: Neck
+  - first:
+      4: 400058
+    second: RearBottomFin1
+  - first:
+      4: 400060
+    second: RearBottomFin2
+  - first:
+      4: 400062
+    second: RearBottomFin2_end
+  - first:
+      4: 400064
+    second: RearTopFin1
+  - first:
+      4: 400066
+    second: RearTopFin2
+  - first:
+      4: 400068
+    second: RearTopFin2_end
+  - first:
+      4: 400070
+    second: Spine1
+  - first:
+      4: 400072
+    second: Spine2
+  - first:
+      4: 400074
+    second: Tail1
+  - first:
+      4: 400076
+    second: Tail2
+  - first:
+      4: 400078
+    second: Tail3
+  - first:
+      4: 400080
+    second: Tail3_end
+  - first:
+      4: 400082
+    second: Walleye
+  - first:
+      4: 400084
+    second: //RootNode
+  - first:
+      4: 400086
+    second: Walleye Skeleton
+  - first:
+      21: 2100000
+    second: Walleye Skin 1
+  - first:
+      21: 2100002
+    second: Walleye Skin 4
+  - first:
+      21: 2100004
+    second: Walleye Skin 5
+  - first:
+      21: 2100006
+    second: Walleye Skin 2
+  - first:
+      21: 2100008
+    second: Walleye Skin 3
+  - first:
+      21: 2100010
+    second: Walleye Eyes
+  - first:
+      21: 2100012
+    second: Walleye Mouth
+  - first:
+      43: 4300000
+    second: Walleye
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      74: 7400002
+    second: Swim
+  - first:
+      74: 7400004
+    second: Eat
+  - first:
+      74: 7400006
+    second: Death
+  - first:
+      74: 7400008
+    second: Death Loop
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Walleye
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walleye Eyes
+    second: {fileID: 2100000, guid: b32aa673d08b5a34fb2c5c1c8aadf830, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walleye Mouth
+    second: {fileID: 2100000, guid: 4b5826a93f191554fb2a829eae497d03, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walleye Skin 1
+    second: {fileID: 2100000, guid: 99bc8a803c541e54381f8cd3c4cfb13b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walleye Skin 2
+    second: {fileID: 2100000, guid: e31b66ada1abdef418d276f662d5c3b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walleye Skin 3
+    second: {fileID: 2100000, guid: f9ef1a40e05a0a9439b0ccd15185e58e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walleye Skin 4
+    second: {fileID: 2100000, guid: bbd46e9ead5db7b4882b95c0ed3dea79, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walleye Skin 5
+    second: {fileID: 2100000, guid: 911e3f4e6d06e6f4c849fef7427dc727, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Swim
+      takeName: Swim
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eat
+      takeName: Eat
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Death
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death Loop
+      takeName: Death Loop
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
