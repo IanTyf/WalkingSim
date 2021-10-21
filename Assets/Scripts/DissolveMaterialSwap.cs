@@ -14,7 +14,7 @@ public class DissolveMaterialSwap : MonoBehaviour
     public float Delay;
 
     public bool active;
-    private float dissolve;
+    public float dissolve;
     private bool dissolveCompleted;
 
     //private GameObject playerObj;
@@ -56,6 +56,19 @@ public class DissolveMaterialSwap : MonoBehaviour
         if (dissolveCompleted) return;
 
         if (Delay == 0) active = true;
+        else
+        {
+            StartCoroutine(WaitAndActive(Delay));
+        }
+    }
+
+    private IEnumerator WaitAndActive(float waitTime)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(waitTime);
+            active = true;
+        }
     }
 
 }

@@ -25,7 +25,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3939c170a69655947be709ebbcad25ba, type: 3}
   m_Name: Gradient
   m_EditorClassIdentifier: 
-  m_Active: 0
+  m_Active: 1
   settings:
     Event: 400
     blitMaterial: {fileID: 2100000, guid: 32f0ff3ef7af82e47966d0cae73dd95c, type: 2}
@@ -91,6 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    material: {fileID: 2100000, guid: e7ca2ee1314df2c429069a4ceb0aab0d, type: 2}
+    material: {fileID: 2100000, guid: b929ecd36fda77a40be4b6bfce2cd4e8, type: 2}
     materialPassIndex: 0
     renderEvent: 500
