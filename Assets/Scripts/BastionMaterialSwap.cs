@@ -2,59 +2,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DissolveMaterialSwap : MonoBehaviour
+public class BastionMaterialSwap : MonoBehaviour
 {
     private Material OldMat;
     private Material mat;
-    public float DissolveDuration;
-    public Vector3 DissolveDirection;
-    public float Scale;
-    public Vector2 Range;
+    public Material endMat;
+
+    public float Height;
+    public float Duration;
+    public Vector3 Direction;
 
     public float Delay;
 
     public bool active;
-    public float dissolve;
-    private bool dissolveCompleted;
-
-    //private GameObject playerObj;
+    public float Appear;
+    private bool AppearCompleted;
 
     // Start is called before the first frame update
     void Start()
     {
         active = false;
-        dissolve = 1f;
-        dissolveCompleted = false;
-        
+        Appear = 1;
+        AppearCompleted = false;
+
         OldMat = GetComponent<MeshRenderer>().material;
         mat = new Material(OldMat);
-        mat.SetVector("_Direction", DissolveDirection);
-        mat.SetFloat("_Scale", Scale);
-        mat.SetVector("_Range", Range);
-        mat.SetFloat("_Dissolve", dissolve);
+        mat.SetFloat("_Height", Height);
+        mat.SetFloat("_Appear", Appear);
+        mat.SetVector("_Direction", Direction);
         this.gameObject.GetComponent<MeshRenderer>().material = mat;
-
-        //playerObj = GameObject.Find("Player");
     }
 
     void Update()
     {
         if (active)
         {
-            dissolve -= (1 / DissolveDuration) * Time.deltaTime;
-            mat.SetFloat("_Dissolve", dissolve);
-            if (dissolve <= 0)
+            Appear -= (1 / Duration) * Time.deltaTime;
+            mat.SetFloat("_Appear", Appear);
+            if (Appear <= 0)
             {
                 active = false;
-                dissolveCompleted = true;
+                AppearCompleted = true;
+                this.gameObject.GetComponent<MeshRenderer>().material = endMat;
             }
         }
     }
 
     public void Active()
     {
-        if (dissolveCompleted) return;
-        //dissolveCompleted = true;
+        if (AppearCompleted) return;
+        //AppearCompleted = true;
         if (Delay == 0) active = true;
         else
         {
@@ -70,5 +67,4 @@ public class DissolveMaterialSwap : MonoBehaviour
         active = true;
         //}
     }
-
 }
