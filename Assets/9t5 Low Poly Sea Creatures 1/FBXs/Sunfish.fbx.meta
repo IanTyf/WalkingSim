@@ -1,0 +1,433 @@
+fileFormatVersion: 2
+guid: a2e9418ae0bcaf9478f5a40debcd8e50
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: BottomFin1
+  - first:
+      1: 100004
+    second: BottomFin2
+  - first:
+      1: 100006
+    second: BottomFin3
+  - first:
+      1: 100008
+    second: BottomFin3_end
+  - first:
+      1: 100010
+    second: Fin1.L
+  - first:
+      1: 100012
+    second: Fin1.R
+  - first:
+      1: 100014
+    second: Fin2.L
+  - first:
+      1: 100016
+    second: Fin2.R
+  - first:
+      1: 100018
+    second: Fin3.L
+  - first:
+      1: 100020
+    second: Fin3.R
+  - first:
+      1: 100022
+    second: Fin4.L
+  - first:
+      1: 100024
+    second: Fin4.L_end
+  - first:
+      1: 100026
+    second: Fin4.R
+  - first:
+      1: 100028
+    second: Fin4.R_end
+  - first:
+      1: 100030
+    second: Head
+  - first:
+      1: 100032
+    second: Head_end
+  - first:
+      1: 100034
+    second: Spine1
+  - first:
+      1: 100036
+    second: Spine2
+  - first:
+      1: 100038
+    second: //RootNode
+  - first:
+      1: 100040
+    second: Sunfish
+  - first:
+      1: 100042
+    second: Tail
+  - first:
+      1: 100044
+    second: Tail_end
+  - first:
+      1: 100046
+    second: TopFin1
+  - first:
+      1: 100048
+    second: TopFin2
+  - first:
+      1: 100050
+    second: TopFin3
+  - first:
+      1: 100052
+    second: TopFin3_end
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: BottomFin1
+  - first:
+      4: 400004
+    second: BottomFin2
+  - first:
+      4: 400006
+    second: BottomFin3
+  - first:
+      4: 400008
+    second: BottomFin3_end
+  - first:
+      4: 400010
+    second: Fin1.L
+  - first:
+      4: 400012
+    second: Fin1.R
+  - first:
+      4: 400014
+    second: Fin2.L
+  - first:
+      4: 400016
+    second: Fin2.R
+  - first:
+      4: 400018
+    second: Fin3.L
+  - first:
+      4: 400020
+    second: Fin3.R
+  - first:
+      4: 400022
+    second: Fin4.L
+  - first:
+      4: 400024
+    second: Fin4.L_end
+  - first:
+      4: 400026
+    second: Fin4.R
+  - first:
+      4: 400028
+    second: Fin4.R_end
+  - first:
+      4: 400030
+    second: Head
+  - first:
+      4: 400032
+    second: Head_end
+  - first:
+      4: 400034
+    second: Spine1
+  - first:
+      4: 400036
+    second: Spine2
+  - first:
+      4: 400038
+    second: //RootNode
+  - first:
+      4: 400040
+    second: Sunfish
+  - first:
+      4: 400042
+    second: Tail
+  - first:
+      4: 400044
+    second: Tail_end
+  - first:
+      4: 400046
+    second: TopFin1
+  - first:
+      4: 400048
+    second: TopFin2
+  - first:
+      4: 400050
+    second: TopFin3
+  - first:
+      4: 400052
+    second: TopFin3_end
+  - first:
+      21: 2100000
+    second: Sunfish Skin 2
+  - first:
+      21: 2100002
+    second: Sunfish Skin 1
+  - first:
+      21: 2100004
+    second: Sunfish Mouth
+  - first:
+      21: 2100006
+    second: Sunfish Eyes
+  - first:
+      43: 4300000
+    second: Sunfish
+  - first:
+      74: 7400000
+    second: Swim
+  - first:
+      74: 7400002
+    second: Eat
+  - first:
+      74: 7400004
+    second: Death
+  - first:
+      74: 7400006
+    second: Death Loop
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Sunfish
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sunfish Eyes
+    second: {fileID: 2100000, guid: 2a6f505cde7c09d4599e45a945ed96b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sunfish Mouth
+    second: {fileID: 2100000, guid: e37a924ea3928384e8a3140e2d3e63d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sunfish Skin 1
+    second: {fileID: 2100000, guid: ce3ff8c0c45e9e84f8ad7eda518e09e2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Sunfish Skin 2
+    second: {fileID: 2100000, guid: fb97f86a93bbc98499a504db9d78dad3, type: 2}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Swim
+      takeName: Swim
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eat
+      takeName: Eat
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death
+      takeName: Death
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Death Loop
+      takeName: Death Loop
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 55
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
