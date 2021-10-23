@@ -39,7 +39,7 @@ public class CafeTrigger : MonoBehaviour
     {
         foreach (GameObject obj in DissolveObjects)
         {
-            obj.GetComponent<DissolveMaterialSwap>().Active();
+            if (obj.tag != "road")  obj.GetComponent<DissolveMaterialSwap>().Active();
         }
 
         foreach (GameObject obj in BastionObjects)

@@ -9,7 +9,7 @@ public class RoadTrigger : MonoBehaviour
 
     private bool dissolve;
 
-    public float dissolveSpeed;
+    //public float dissolveSpeed;
 
     public AudioSource audio;
     private bool audioStarted;
