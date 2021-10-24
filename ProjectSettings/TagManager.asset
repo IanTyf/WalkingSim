@@ -8,6 +8,7 @@ TagManager:
   - WaterWall
   - WaterCube
   - road
+  - Fence
   layers:
   - Default
   - TransparentFX
