@@ -7,6 +7,7 @@ TagManager:
   - WaterPlane
   - WaterWall
   - WaterCube
+  - road
   layers:
   - Default
   - TransparentFX
