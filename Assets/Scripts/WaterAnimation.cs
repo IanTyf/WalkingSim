@@ -24,6 +24,12 @@ public class WaterAnimation : MonoBehaviour
     void Start()
     {
         transform.localPosition = Start_Position;
+
+        for (int i=0; i<transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            if (child.tag != "WaterWall") child.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -37,6 +43,12 @@ public class WaterAnimation : MonoBehaviour
 
     public void Active()
     {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            if (child.tag != "WaterWall") child.gameObject.SetActive(true);
+        }
+
         if (Delay_Time == 0) Anim_Start = true;
         else
         {
