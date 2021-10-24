@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class CafeSkyboxTrigger : MonoBehaviour
 {
-    public Vector4 TargetColor;
+    public Vector4 HighlightColor;
+    private Vector4 TargetColor;
+    public Vector4 OriginalColor;
     private GameObject player;
     private Camera cam;
 
     public bool lerp;
+    private bool lerpReverse;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +30,7 @@ public class CafeSkyboxTrigger : MonoBehaviour
                 new Vector4(TargetColor.x/255f, TargetColor.y/255f, TargetColor.z/255f, TargetColor.w/255f), 0.005f);
             cam.backgroundColor = new Color(newColVec.x, newColVec.y, newColVec.z, newColVec.w);
 
-            if (Vector4.Distance(newColVec, new Vector4(currentCol.r, currentCol.g, currentCol.b, currentCol.a)) < 0.001f)
+            if (Vector4.Distance(newColVec, new Vector4(currentCol.r, currentCol.g, currentCol.b, currentCol.a)) < 0.00001f)
             {
                 lerp = false;
             }
@@ -37,6 +40,13 @@ public class CafeSkyboxTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //cam.backgroundColor = new Color(TargetColor.x/255f, TargetColor.y/255f, TargetColor.z/255f, TargetColor.w/255f);
+        TargetColor = HighlightColor;
+        lerp = true;
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        TargetColor = OriginalColor;
         lerp = true;
     }
 }
