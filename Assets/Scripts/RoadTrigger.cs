@@ -7,7 +7,7 @@ public class RoadTrigger : MonoBehaviour
     //opublic Material roadMat;
     public GameObject road;
 
-    private bool dissolve;
+    //private bool dissolve;
 
     //public float dissolveSpeed;
 
@@ -17,7 +17,7 @@ public class RoadTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dissolve = false;
+        //dissolve = false;
         //roadMat.SetFloat("_Dissolve", 1);
         audioStarted = false;
     }

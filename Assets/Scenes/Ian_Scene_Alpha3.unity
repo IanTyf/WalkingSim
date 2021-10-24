@@ -21354,6 +21354,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterAnims: []
   waterCubes: []
+  fences: []
 --- !u!65 &1705078469
 BoxCollider:
   m_ObjectHideFlags: 0

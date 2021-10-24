@@ -9,11 +9,18 @@ public class WaterAnimationTrigger : MonoBehaviour
     public WaterAnimation[] waterAnims;
     public GameObject[] waterCubes;
 
+    public GameObject[] fences;
+
     private void OnTriggerEnter(Collider other)
     {
         for (int i = 0; i < waterAnims.Length; i++) 
         {
             waterAnims[i].Active();
+        }
+
+        foreach (GameObject obj in fences)
+        {
+            obj.GetComponent<DissolveMaterialSwap>().Active();
         }
     }
 
@@ -25,6 +32,9 @@ public class WaterAnimationTrigger : MonoBehaviour
         {
             waterCubes[i] = waterAnims[i].gameObject;
         }
+
+        fences = GameObject.FindGameObjectsWithTag("Fence");
+
     }
 
     // Update is called once per frame

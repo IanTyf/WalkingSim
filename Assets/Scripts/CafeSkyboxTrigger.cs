@@ -40,13 +40,19 @@ public class CafeSkyboxTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //cam.backgroundColor = new Color(TargetColor.x/255f, TargetColor.y/255f, TargetColor.z/255f, TargetColor.w/255f);
-        TargetColor = HighlightColor;
-        lerp = true;
+        if (other.tag == "Player")
+        {
+            TargetColor = HighlightColor;
+            lerp = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        TargetColor = OriginalColor;
-        lerp = true;
+        if (other.tag == "Player")
+        {
+            TargetColor = OriginalColor;
+            lerp = true;
+        }
     }
 }
