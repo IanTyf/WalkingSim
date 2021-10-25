@@ -4,7 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - WaterPlane
+  - WaterWall
+  - WaterCube
   - road
+  - Fence
+  - Pillar
+  - Ceiling
+  - Skylight
+  - CenterWaterCube
   layers:
   - Default
   - TransparentFX
