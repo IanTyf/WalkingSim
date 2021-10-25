@@ -19,6 +19,11 @@ public class Water_Crush : MonoBehaviour
         }
 
         Cube.SetActive(true);
+
+        if (Cube.tag == "CenterWaterCube")
+        {
+            Cube.GetComponent<Rigidbody>().AddForce(transform.up * 3, ForceMode.Impulse);
+        }
   
         for (int j=0; j < Fishes.Length; j++) 
         {
