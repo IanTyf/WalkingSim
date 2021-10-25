@@ -22,7 +22,10 @@ public class BastionFloorTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            floorCrush();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -43,6 +46,17 @@ public class BastionFloorTrigger : MonoBehaviour
         foreach (GameObject obj in fences)
         {
             obj.GetComponent<DissolveMaterialSwap>().Active();
+        }
+    }
+
+    private void floorCrush()
+    {
+        realFloor.SetActive(false);
+        bastionFloorParent.SetActive(true);
+        foreach (FloorBastion fb in fbs)
+        {
+            fb.ActiveReverse();
+            fb.gameObject.GetComponent<BoxCollider>().isTrigger = true;
         }
     }
 }

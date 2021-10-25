@@ -15,6 +15,7 @@ public class FloorBastion : MonoBehaviour
     public float Delay;
 
     public bool active;
+    public bool deactive;
     public float Appear;
     private bool AppearCompleted;
 
@@ -22,6 +23,7 @@ public class FloorBastion : MonoBehaviour
     void Start()
     {
         active = false;
+        deactive = false;
         Appear = 1;
         AppearCompleted = false;
 
@@ -48,7 +50,17 @@ public class FloorBastion : MonoBehaviour
             {
                 active = false;
                 AppearCompleted = true;
-                this.gameObject.GetComponent<MeshRenderer>().material = endMat;
+                //this.gameObject.GetComponent<MeshRenderer>().material = endMat;
+            }
+        }
+
+        if (deactive)
+        {
+            Appear += (1 / Duration) * Time.deltaTime;
+            mat.SetFloat("_Appear", Appear);
+            if (Appear >= 1)
+            {
+                deactive = false;
             }
         }
     }
@@ -71,5 +83,20 @@ public class FloorBastion : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         active = true;
         //}
+    }
+
+    public void ActiveReverse()
+    {
+        if (Delay == 0) deactive = true;
+        else
+        {
+            StartCoroutine(WaitAndDeactive(Delay));
+        }
+    }
+
+    IEnumerator WaitAndDeactive(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        deactive = true;
     }
 }
