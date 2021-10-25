@@ -13,6 +13,7 @@ TagManager:
   - Ceiling
   - Skylight
   - CenterWaterCube
+  - Station
   layers:
   - Default
   - TransparentFX
