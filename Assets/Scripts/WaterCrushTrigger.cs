@@ -5,6 +5,7 @@ using UnityEngine;
 public class WaterCrushTrigger : MonoBehaviour
 {
     public Water_Crush[] WaterCrushes;
+    public GameObject WaterPortol;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class WaterCrushTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        WaterPortol.SetActive(true);
         for (int i = 0; i < WaterCrushes.Length; i++) 
         {
             WaterCrushes[i].BeginCrush();
