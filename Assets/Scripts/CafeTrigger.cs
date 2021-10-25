@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CafeTrigger : MonoBehaviour
 {
+    //public GameObject Particle;
 
     public DissolveMaterialSwap[] DissolveMaterialSwaps;
     public GameObject[] DissolveObjects;
@@ -37,14 +38,16 @@ public class CafeTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Particle.GetComponent<ParticleMovement>().disappear = true;
+
         foreach (GameObject obj in DissolveObjects)
         {
-            if ((obj.tag != "road") && (obj.tag != "Fence"))  obj.GetComponent<DissolveMaterialSwap>().Active();
+            if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station")) obj.GetComponent<DissolveMaterialSwap>().Active();
         }
 
         foreach (GameObject obj in BastionObjects)
         {
-            obj.GetComponent<BastionMaterialSwap>().Active();
+            if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station")) obj.GetComponent<BastionMaterialSwap>().Active();
         }
     }
 }
