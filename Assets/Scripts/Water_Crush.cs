@@ -9,6 +9,7 @@ public class Water_Crush : MonoBehaviour
     public GameObject[] WaterPlanes;
     public float DelayTime = 0.5f;
     public GameObject[] Fishes;
+    
     // Start is called before the first frame update
 
     public void WaterCrush() 
@@ -33,8 +34,15 @@ public class Water_Crush : MonoBehaviour
         
     }
 
+    public void WaterFall() 
+    {
+        Cube.GetComponent<Rigidbody>().useGravity = true;
+    }
+
     public void BeginCrush() 
     {
+
+        
         if (DelayTime == 0)
             WaterCrush();
         else 
