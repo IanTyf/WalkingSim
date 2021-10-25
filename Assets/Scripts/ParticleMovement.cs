@@ -8,6 +8,10 @@ public class ParticleMovement : MonoBehaviour
     public int checkpoint;
     public Vector3[] stops;
 
+    public bool disappear;
+    private ParticleSystem ps;
+    private float alpha;
+
     private GameObject player;
 
     // Start is called before the first frame update
@@ -15,6 +19,9 @@ public class ParticleMovement : MonoBehaviour
     {
         checkpoint = 0;
         player = GameObject.Find("Player");
+        disappear = false;
+        ps = GetComponent<ParticleSystem>();
+        alpha = 1;
     }
 
     // Update is called once per frame
@@ -30,10 +37,44 @@ public class ParticleMovement : MonoBehaviour
 
         if (Vector3.Distance(transform.position, stops[checkpoint]) < 2f)
         {
-            if (checkpoint == 1 || checkpoint == 4 || checkpoint == 8 || checkpoint == 9 || checkpoint == 10 || checkpoint == 7)
+            if (checkpoint == 1 || checkpoint == 3 || checkpoint == 8 || checkpoint == 9 || checkpoint == 10 || checkpoint == 7)
             {
                 checkpoint++;
             }
+        }
+
+        //if (checkpoint == 3)
+        //{
+            //disappear = true;
+        //}
+
+        if (disappear)
+        {
+            var main = ps.main;
+            main.startColor = new Color(1, 1, 1, alpha);
+
+            var main2 = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().main;
+            main2.startColor = new Color(1, 1, 1, alpha);
+
+            var main3 = transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().main;
+            main3.startColor = new Color(1, 1, 1, alpha);
+
+            alpha -= 20f * Time.deltaTime;
+            if (alpha < 0) alpha = 0;
+        }
+        else
+        {
+            var main = ps.main;
+            main.startColor = new Color(1, 1, 1, alpha);
+
+            var main2 = transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().main;
+            main2.startColor = new Color(1, 1, 1, alpha);
+
+            var main3 = transform.GetChild(1).gameObject.GetComponent<ParticleSystem>().main;
+            main3.startColor = new Color(1, 1, 1, alpha);
+
+            alpha += 20f * Time.deltaTime;
+            if (alpha > 1) alpha = 1;
         }
     }
 
