@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: CameraGradient 1
+  m_Name: CameraGradient_station
   m_Shader: {fileID: -6465566751694194690, guid: f6db831c0eecd7e4fb0725adec09f604, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -57,7 +57,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 87ce03bd447ccce48bbff87ac0d8355f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -89,9 +89,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_628cc7dcbd8f4e7e9d69fcc547818207: 2.22
-    - Vector1_67ef084fd1ca431e87bab538c9c61cab: -0.3
-    - Vector1_ce7057ac311d460d9bf75f0b6eae6aff: 0.55
+    - Vector1_628cc7dcbd8f4e7e9d69fcc547818207: 3.08
+    - Vector1_67ef084fd1ca431e87bab538c9c61cab: -0.5
+    - Vector1_ce7057ac311d460d9bf75f0b6eae6aff: 0.67
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -119,8 +119,8 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_d5c6db80aa754115af198ced7bce5f75: {r: 0, g: 0.5850754, b: 1, a: 0}
-    - Color_e2638680ae2049d5ac6a7aee40029dc0: {r: 0, g: 0.12483072, b: 1, a: 0}
+    - Color_d5c6db80aa754115af198ced7bce5f75: {r: 1, g: 0.49411762, b: 0.6060296, a: 0}
+    - Color_e2638680ae2049d5ac6a7aee40029dc0: {r: 0.21335793, g: 0, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
