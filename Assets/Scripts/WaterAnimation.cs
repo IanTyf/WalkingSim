@@ -46,7 +46,7 @@ public class WaterAnimation : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             Transform child = transform.GetChild(i);
-            if (child.tag != "WaterWall") child.gameObject.SetActive(true);
+            if (child.tag != "WaterWall" && child.tag != "CenterWaterCube") child.gameObject.SetActive(true);
         }
 
         if (Delay_Time == 0) Anim_Start = true;
