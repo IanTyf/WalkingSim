@@ -9,7 +9,7 @@ public class WaterAnimationTrigger : MonoBehaviour
     public WaterAnimation[] waterAnims;
     public GameObject[] waterCubes;
 
-    public GameObject[] fences;
+    //public GameObject[] fences;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,10 +18,7 @@ public class WaterAnimationTrigger : MonoBehaviour
             waterAnims[i].Active();
         }
 
-        foreach (GameObject obj in fences)
-        {
-            obj.GetComponent<DissolveMaterialSwap>().Active();
-        }
+        
     }
 
     void Start()
@@ -33,7 +30,7 @@ public class WaterAnimationTrigger : MonoBehaviour
             waterCubes[i] = waterAnims[i].gameObject;
         }
 
-        fences = GameObject.FindGameObjectsWithTag("Fence");
+        //fences = GameObject.FindGameObjectsWithTag("Fence");
 
     }
 

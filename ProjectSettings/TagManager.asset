@@ -9,6 +9,10 @@ TagManager:
   - WaterCube
   - road
   - Fence
+  - Pillar
+  - Ceiling
+  - Skylight
+  - CenterWaterCube
   layers:
   - Default
   - TransparentFX
