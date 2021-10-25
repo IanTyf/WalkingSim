@@ -313,7 +313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4670740810837740, guid: 152f9c4fe93efa340bcab6549148ffe4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -59.39
+      value: -65.82
       objectReference: {fileID: 0}
     - target: {fileID: 4670740810837740, guid: 152f9c4fe93efa340bcab6549148ffe4, type: 3}
       propertyPath: m_LocalRotation.w
@@ -44124,7 +44124,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh96534
+  m_Name: pb_Mesh33278
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -87069,7 +87069,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh98770
+  m_Name: pb_Mesh35514
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -91507,11 +91507,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 398bd993b79394b41a5625dae9df8b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 12
   checkpoint: 0
   stops:
-  - {x: 57.14, y: 2.201, z: -67.21}
+  - {x: 57.14, y: 2.201, z: -65.82}
   - {x: 57.14, y: 2.201, z: -59.39}
-  - {x: 35.81, y: 2.201, z: -59.39}
+  - {x: 50.4, y: 2.201, z: -59.39}
+  - {x: 9.31, y: 2.201, z: -59.39}
+  - {x: 0.191, y: 2.201, z: -59.39}
+  - {x: 0.191, y: 2.201, z: -37.14}
+  - {x: 0.191, y: 2.201, z: 38.85}
+  - {x: 0.191, y: 2.201, z: 56.03}
+  - {x: 20.91, y: 2.201, z: 56.03}
+  - {x: 20.91, y: 2.201, z: 91.91}
+  - {x: 0.191, y: 2.201, z: 96.78}
+  - {x: 0.191, y: 2.201, z: 116.7}
 --- !u!65 &1902609386
 BoxCollider:
   m_ObjectHideFlags: 0
