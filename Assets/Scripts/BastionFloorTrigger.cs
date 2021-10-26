@@ -25,6 +25,7 @@ public class BastionFloorTrigger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M))
         {
             floorCrush();
+            FenceCrush();
         }
     }
 
@@ -53,7 +54,7 @@ public class BastionFloorTrigger : MonoBehaviour
         }
     }
 
-    private void floorCrush()
+    public void floorCrush()
     {
         realFloor.SetActive(false);
         bastionFloorParent.SetActive(true);
@@ -61,6 +62,16 @@ public class BastionFloorTrigger : MonoBehaviour
         {
             fb.ActiveReverse();
             fb.gameObject.GetComponent<BoxCollider>().isTrigger = true;
+        }
+    }
+
+    public void FenceCrush()
+    {
+        foreach (GameObject obj in fences)
+        {
+            Rigidbody rb = obj.AddComponent<Rigidbody>();
+            rb.useGravity = false;
+            rb.AddExplosionForce(500, new Vector3(1f, 0.78f, 73.3f), 50);
         }
     }
 }

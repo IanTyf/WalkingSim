@@ -9,10 +9,20 @@ public class StationTrigger : MonoBehaviour
     public SationAnim StationAnim;
     public WaterLerp WaterLerp;
 
+    public DissolveMaterialSwap[] DissolveMaterialSwaps;
+    public GameObject[] DissolveObjects;
+
     void Start()
     {
         StationAnim = GameObject.FindObjectOfType<SationAnim>();
         WaterLerp = GameObject.FindObjectOfType<WaterLerp>();
+
+        DissolveMaterialSwaps = GameObject.FindObjectsOfType<DissolveMaterialSwap>();
+        DissolveObjects = new GameObject[DissolveMaterialSwaps.Length];
+        for (int i = 0; i < DissolveMaterialSwaps.Length; i++)
+        {
+            DissolveObjects[i] = DissolveMaterialSwaps[i].gameObject;
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -21,6 +31,12 @@ public class StationTrigger : MonoBehaviour
         {
             StationAnim.AnimBegin();
             WaterLerp.BeginLerp = true;
+            GameObject.FindObjectOfType<GameManager>().shouldSpawn = true;
+
+            foreach (GameObject obj in DissolveObjects)
+            {
+                if (obj.tag == "Station") obj.GetComponent<DissolveMaterialSwap>().Active();
+            }
         }
 
     }
