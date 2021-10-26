@@ -42,6 +42,7 @@ public class ObjectShake : MonoBehaviour
             shakeAmplifySpeed += 0.04f;
         }
 
+        /*
         if (Input.GetMouseButtonDown(1)) {
             shake = false;
             Break();
@@ -50,7 +51,7 @@ public class ObjectShake : MonoBehaviour
         {
             shake = true;
         }
-        
+        */
     }
 
     private void shakePosition(GameObject obj, int i)
@@ -60,7 +61,7 @@ public class ObjectShake : MonoBehaviour
             objsPos[i].z + Random.Range(shakeAmount.x, shakeAmount.y) * shakeAmplify);
     }
 
-    private void Break()
+    public void Break()
     {
         foreach (GameObject obj in objs)
         {

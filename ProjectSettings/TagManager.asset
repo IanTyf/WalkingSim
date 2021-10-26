@@ -16,6 +16,8 @@ TagManager:
   - Station
   - ParticleDisappear
   - Important
+  - FinalStairs
+  - StationExplode
   layers:
   - Default
   - TransparentFX

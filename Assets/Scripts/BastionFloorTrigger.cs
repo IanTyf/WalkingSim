@@ -22,11 +22,11 @@ public class BastionFloorTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            floorCrush();
-            FenceCrush();
-        }
+        //if (Input.GetKeyDown(KeyCode.M))
+        //{
+        //    floorCrush();
+        //    FenceCrush();
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
@@ -70,7 +70,7 @@ public class BastionFloorTrigger : MonoBehaviour
         foreach (GameObject obj in fences)
         {
             Rigidbody rb = obj.AddComponent<Rigidbody>();
-            rb.useGravity = false;
+            rb.useGravity = true;
             rb.AddExplosionForce(500, new Vector3(1f, 0.78f, 73.3f), 50);
         }
     }
