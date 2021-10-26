@@ -7,6 +7,10 @@ public class Train_stay : MonoBehaviour
 
     public float TrainStayTime = 10f;
     public bool animBool;
+  
+    public Vector3 WaterPosition;
+    public GameObject Water;
+    public ReversePlatform ReverseP;
     // Start is called before the first frame update
 
     public void TrainStay() 
@@ -21,9 +25,19 @@ public class Train_stay : MonoBehaviour
     }
     void Start()
     {
-        
+        ReverseP = FindObjectOfType<ReversePlatform>();
     }
 
+    public void InstantMove() 
+    {
+       
+        Water.gameObject.transform.position = WaterPosition;
+    }
+
+    public void ReverseRun() 
+    {
+        ReverseP.ReverseRun();
+    }
     // Update is called once per frame
     void Update()
     {

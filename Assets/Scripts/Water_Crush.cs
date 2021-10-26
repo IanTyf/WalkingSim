@@ -9,6 +9,10 @@ public class Water_Crush : MonoBehaviour
     public GameObject[] WaterPlanes;
     public float DelayTime = 0.5f;
     public GameObject[] Fishes;
+    public float  ExplosionStrength;
+    public Vector3 ExplosionPosition;
+    public float ExplosionRadius;
+    public float UpMod;
     
     // Start is called before the first frame update
 
@@ -24,6 +28,10 @@ public class Water_Crush : MonoBehaviour
         if (Cube.tag == "CenterWaterCube")
         {
             Cube.GetComponent<Rigidbody>().AddForce(transform.up * 3, ForceMode.Impulse);
+        }
+        else 
+        {
+            Cube.GetComponent<Rigidbody>().AddExplosionForce(ExplosionStrength, ExplosionPosition, ExplosionRadius,UpMod,ForceMode.Impulse);
         }
   
         for (int j=0; j < Fishes.Length; j++) 

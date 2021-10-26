@@ -36,13 +36,13 @@ public class TrainTriggerInside : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)
     {
-        Passenger.transform.SetParent(Train.transform, true);
+        if (other.tag == "Player") Passenger.transform.SetParent(Train.transform, true);
         //if (other.tag == "Player") moveAlong = true;
     }
 
-    private void OnTriggerExit(Collider other)
+  /*  private void OnTriggerExit(Collider other)
     {
-        Passenger.transform.SetParent(null, true);
+        if (other.tag == "Player") Passenger.transform.SetParent(null, true);
         //if (other.tag == "Player") moveAlong = false;
-    }
+    }*/
 }
