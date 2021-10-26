@@ -15,6 +15,12 @@ public class Train_stay : MonoBehaviour
     public GameObject views;
 
     public GameObject altWater;
+    public GameObject FadeObj;
+    public GameObject Luggage;
+    public GameObject TrackSound;
+
+    public MemoryFade Script;
+    public MemoryFade Script1;
     // Start is called before the first frame update
 
     public void TrainStay() 
@@ -30,12 +36,30 @@ public class Train_stay : MonoBehaviour
     void Start()
     {
         ReverseP = FindObjectOfType<ReversePlatform>();
+        Script = FadeObj.GetComponent<MemoryFade>();
+        Script1 = Luggage.GetComponent<MemoryFade>();
     }
 
     public void InstantMove() 
     {
         altWater.GetComponent<MeshRenderer>().enabled = true;
         Water.gameObject.transform.position = WaterPosition;
+    }
+
+    public void MemoFade() 
+    {
+        Script.BeginFade = true;
+        Luggage.GetComponent<MeshRenderer>().material = Script1.MemoryMat;
+        Script1.BeginFade = true;
+    }
+
+    public void playTrackSound() 
+    {
+        TrackSound.SetActive(true);
+    }
+    public void stopTrackSound() 
+    {
+        TrackSound.SetActive(false);
     }
 
     public void ReverseRun() 
