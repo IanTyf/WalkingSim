@@ -332,6 +332,11 @@ MonoBehaviour:
   - {fileID: 5712784934513437316}
   - {fileID: 5712784933616547088}
   DelayTime: 0.5
+  Fishes: []
+  ExplosionStrength: 200
+  ExplosionPosition: {x: 0, y: -200, z: 75}
+  ExplosionRadius: 10000
+  UpMod: 0.3
 --- !u!1 &5712784933616547088
 GameObject:
   m_ObjectHideFlags: 0
