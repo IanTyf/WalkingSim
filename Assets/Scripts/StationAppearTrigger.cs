@@ -15,6 +15,8 @@ public class StationAppearTrigger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //outlineMat = GetComponent<MeshRenderer>().material;
+
         DissolveMaterialSwaps = GameObject.FindObjectsOfType<DissolveMaterialSwap>();
         DissolveObjects = new GameObject[DissolveMaterialSwaps.Length];
         for (int i = 0; i < DissolveMaterialSwaps.Length; i++)
@@ -38,17 +40,20 @@ public class StationAppearTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        outlineMat.SetFloat("_NormalsStrength", 1.24f);
-        outlineMat.SetFloat("_NormalsTightening", 0.11f);
-
-        foreach (GameObject obj in DissolveObjects)
+        if (other.tag == "Player")
         {
-            if (obj.tag == "Station") obj.GetComponent<DissolveMaterialSwap>().Active();
-        }
+            outlineMat.SetFloat("_NormalsStrength", 1.24f);
+            outlineMat.SetFloat("_NormalsTightening", 0.11f);
 
-        foreach (GameObject obj in BastionObjects)
-        {
-            if (obj.tag == "Station") obj.GetComponent<BastionMaterialSwap>().Active();
+            foreach (GameObject obj in DissolveObjects)
+            {
+                if (obj.tag == "Station") obj.GetComponent<DissolveMaterialSwap>().Active();
+            }
+
+            foreach (GameObject obj in BastionObjects)
+            {
+                if (obj.tag == "Station") obj.GetComponent<BastionMaterialSwap>().Active();
+            }
         }
     }
 }

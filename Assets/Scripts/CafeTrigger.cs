@@ -39,15 +39,17 @@ public class CafeTrigger : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         //Particle.GetComponent<ParticleMovement>().disappear = true;
-
-        foreach (GameObject obj in DissolveObjects)
+        if (other.tag == "Player")
         {
-            if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station")) obj.GetComponent<DissolveMaterialSwap>().Active();
-        }
+            foreach (GameObject obj in DissolveObjects)
+            {
+                if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station")) obj.GetComponent<DissolveMaterialSwap>().Active();
+            }
 
-        foreach (GameObject obj in BastionObjects)
-        {
-            if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station")) obj.GetComponent<BastionMaterialSwap>().Active();
+            foreach (GameObject obj in BastionObjects)
+            {
+                if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station")) obj.GetComponent<BastionMaterialSwap>().Active();
+            }
         }
     }
 }

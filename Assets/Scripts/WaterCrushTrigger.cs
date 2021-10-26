@@ -15,12 +15,14 @@ public class WaterCrushTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        WaterPortol.SetActive(true);
-        for (int i = 0; i < WaterCrushes.Length; i++) 
+        if (other.tag == "Player")
         {
-            WaterCrushes[i].BeginCrush();
+            WaterPortol.SetActive(true);
+            for (int i = 0; i < WaterCrushes.Length; i++)
+            {
+                WaterCrushes[i].BeginCrush();
+            }
         }
-        
     }
 
   

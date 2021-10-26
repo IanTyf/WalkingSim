@@ -17,8 +17,11 @@ public class StationTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        StationAnim.AnimBegin();
-        WaterLerp.BeginLerp = true ;
+        if (other.tag == "Player")
+        {
+            StationAnim.AnimBegin();
+            WaterLerp.BeginLerp = true;
+        }
 
     }
     // Update is called once per frame
