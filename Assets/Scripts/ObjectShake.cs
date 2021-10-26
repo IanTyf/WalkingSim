@@ -39,7 +39,7 @@ public class ObjectShake : MonoBehaviour
                 shakePosition(objs[i], i);
             }
             shakeAmplify = 1 + shakeAmplifySpeed * Time.deltaTime;
-            shakeAmplifySpeed += 0.3f;
+            shakeAmplifySpeed += 0.04f;
         }
 
         if (Input.GetMouseButtonDown(1)) {

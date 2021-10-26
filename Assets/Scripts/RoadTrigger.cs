@@ -46,7 +46,7 @@ public class RoadTrigger : MonoBehaviour
         {
             road.GetComponent<DissolveMaterialSwap>().Active();
 
-            if (!audioStarted)
+            if (!audioStarted && audio != null)
             {
                 audio.Play();
                 audioStarted = true;

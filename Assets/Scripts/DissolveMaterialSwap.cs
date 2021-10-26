@@ -35,6 +35,17 @@ public class DissolveMaterialSwap : MonoBehaviour
         this.gameObject.GetComponent<MeshRenderer>().material = mat;
 
         //playerObj = GameObject.Find("Player");
+        GetComponent<MeshRenderer>().enabled = false;
+        //GetComponent<MeshCollider>().enabled = false;
+        //GetComponent<BoxCollider>().enabled = false;
+        if (TryGetComponent(out MeshCollider mc))
+        {
+            mc.enabled = false;
+        }
+        if (TryGetComponent(out BoxCollider bc))
+        {
+            bc.enabled = false;
+        }
     }
 
     void Update()
@@ -55,7 +66,20 @@ public class DissolveMaterialSwap : MonoBehaviour
     {
         if (dissolveCompleted) return;
         //dissolveCompleted = true;
-        if (Delay == 0) active = true;
+
+        if (Delay == 0)
+        {
+            active = true;
+            GetComponent<MeshRenderer>().enabled = true;
+            if (TryGetComponent(out MeshCollider mc))
+            {
+                mc.enabled = true;
+            }
+            if (TryGetComponent(out BoxCollider bc))
+            {
+                bc.enabled = true;
+            }
+        }
         else
         {
             StartCoroutine(WaitAndActive(Delay));
@@ -68,6 +92,15 @@ public class DissolveMaterialSwap : MonoBehaviour
         //{
         yield return new WaitForSeconds(waitTime);
         active = true;
+        GetComponent<MeshRenderer>().enabled = true;
+        if (TryGetComponent(out MeshCollider mc))
+        {
+            mc.enabled = true;
+        }
+        if (TryGetComponent(out BoxCollider bc))
+        {
+            bc.enabled = true;
+        }
         //}
     }
 
