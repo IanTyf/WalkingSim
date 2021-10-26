@@ -11,7 +11,7 @@ public class SationAnim : MonoBehaviour
 
     public void AnimBegin()
     {
-        Train.gameObject.SetActive(true);
+        //Train.gameObject.SetActive(true);
         Water.gameObject.SetActive(true);
     }
 

@@ -19,6 +19,7 @@ public class WaterAnimationTrigger : MonoBehaviour
             {
                 waterAnims[i].Active();
             }
+            GameObject.FindObjectOfType<GameManager>().aquaShouldCrush = true;
         }
         
     }

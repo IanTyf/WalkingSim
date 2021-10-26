@@ -27,6 +27,11 @@ public class ParticleMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (checkpoint == 11)
+        {
+            Destroy(this.gameObject);
+        }
+
         //transform.position = Vector3.Lerp(transform.position, stops[checkpoint], 0.003f);
         transform.position = Vector3.MoveTowards(transform.position, stops[checkpoint], speed * Time.deltaTime);
 
@@ -76,6 +81,8 @@ public class ParticleMovement : MonoBehaviour
             alpha += 20f * Time.deltaTime;
             if (alpha > 1) alpha = 1;
         }
+
+        
     }
 
     
