@@ -51,6 +51,8 @@ public class RoadTrigger : MonoBehaviour
                 audio.Play();
                 audioStarted = true;
             }
+
+            GameObject.Find("GameManager").GetComponent<GameManager>().StartTimerSince15 = true;
         }
     }
 }
