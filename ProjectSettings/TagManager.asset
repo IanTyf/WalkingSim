@@ -14,6 +14,7 @@ TagManager:
   - Skylight
   - CenterWaterCube
   - Station
+  - ParticleDisappear
   layers:
   - Default
   - TransparentFX

@@ -44,7 +44,7 @@ public class ObjectShake : MonoBehaviour
 
         if (Input.GetMouseButtonDown(1)) {
             shake = false;
-            Explode();
+            Break();
         }
         if (Input.GetKeyDown(KeyCode.K))
         {
@@ -60,7 +60,7 @@ public class ObjectShake : MonoBehaviour
             objsPos[i].z + Random.Range(shakeAmount.x, shakeAmount.y) * shakeAmplify);
     }
 
-    private void Explode()
+    private void Break()
     {
         foreach (GameObject obj in objs)
         {
@@ -70,5 +70,16 @@ public class ObjectShake : MonoBehaviour
             if (obj.tag == "Ceiling") rb.AddForceAtPosition(new Vector3(10, 10, 0), transform.position, ForceMode.Impulse);
             //if (obj.tag == "Skylight") rb.useGravity = true;
         }
+    }
+
+    public void Shake()
+    {
+        shake = true;
+    }
+
+    public void Explode()
+    {
+        shake = false;
+        Break();
     }
 }

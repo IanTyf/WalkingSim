@@ -13,11 +13,13 @@ public class WaterAnimationTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        for (int i = 0; i < waterAnims.Length; i++) 
+        if (other.tag == "Player")
         {
-            waterAnims[i].Active();
+            for (int i = 0; i < waterAnims.Length; i++)
+            {
+                waterAnims[i].Active();
+            }
         }
-
         
     }
 

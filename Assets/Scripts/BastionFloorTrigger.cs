@@ -30,11 +30,15 @@ public class BastionFloorTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        foreach (FloorBastion fb in fbs)
+        if (other.tag == "Player")
         {
-            fb.Active();
+
+            foreach (FloorBastion fb in fbs)
+            {
+                fb.Active();
+            }
+            StartCoroutine(swapFloor());
         }
-        StartCoroutine(swapFloor());
     }
 
     IEnumerator swapFloor()
