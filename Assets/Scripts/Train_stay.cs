@@ -11,6 +11,10 @@ public class Train_stay : MonoBehaviour
     public Vector3 WaterPosition;
     public GameObject Water;
     public ReversePlatform ReverseP;
+
+    public GameObject views;
+
+    public GameObject altWater;
     // Start is called before the first frame update
 
     public void TrainStay() 
@@ -30,7 +34,7 @@ public class Train_stay : MonoBehaviour
 
     public void InstantMove() 
     {
-       
+        altWater.GetComponent<MeshRenderer>().enabled = true;
         Water.gameObject.transform.position = WaterPosition;
     }
 
@@ -42,5 +46,10 @@ public class Train_stay : MonoBehaviour
     void Update()
     {
         animBool = GetComponent<Animator>().GetBool("Entered");
+    }
+
+    public void destroyView()
+    {
+        Destroy(views);
     }
 }

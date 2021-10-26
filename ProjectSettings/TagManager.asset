@@ -15,6 +15,7 @@ TagManager:
   - CenterWaterCube
   - Station
   - ParticleDisappear
+  - Important
   layers:
   - Default
   - TransparentFX
