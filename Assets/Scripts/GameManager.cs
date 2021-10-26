@@ -14,9 +14,14 @@ public class GameManager : MonoBehaviour
 
     private ObjectShake OS;
 
+    public Material outlineMat;
+
     // Start is called before the first frame update
     void Start()
     {
+        outlineMat.SetFloat("_NormalsStrength", 1f);
+        outlineMat.SetFloat("_NormalsTightening", 1f);
+
         StartTimerSince15 = false;
         TimerSince15 = 0;
         StartCollapsed = false;

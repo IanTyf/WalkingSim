@@ -78,13 +78,13 @@ public class ParticleMovement : MonoBehaviour
         }
     }
 
-    /*
+    
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "ParticleDisappear")
         {
-            checkpoint++;
+            disappear = true;
         }
     }
-    */
+    
 }
