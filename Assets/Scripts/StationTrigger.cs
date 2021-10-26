@@ -7,7 +7,7 @@ public class StationTrigger : MonoBehaviour
     // Start is called before the first frame update
 
     public SationAnim StationAnim;
-    public WaterLerp WaterLerp;
+    public WaterLerp[] WaterLerps;
 
     public DissolveMaterialSwap[] DissolveMaterialSwaps;
     public GameObject[] DissolveObjects;
@@ -15,7 +15,7 @@ public class StationTrigger : MonoBehaviour
     void Start()
     {
         StationAnim = GameObject.FindObjectOfType<SationAnim>();
-        WaterLerp = GameObject.FindObjectOfType<WaterLerp>();
+        WaterLerps = GameObject.FindObjectsOfType<WaterLerp>();
 
         DissolveMaterialSwaps = GameObject.FindObjectsOfType<DissolveMaterialSwap>();
         DissolveObjects = new GameObject[DissolveMaterialSwaps.Length];
@@ -30,7 +30,11 @@ public class StationTrigger : MonoBehaviour
         if (other.tag == "Player")
         {
             StationAnim.AnimBegin();
-            WaterLerp.BeginLerp = true;
+            foreach (WaterLerp wl in WaterLerps)
+            {
+                wl.BeginLerp = true;
+            }
+            
             GameObject.FindObjectOfType<GameManager>().shouldSpawn = true;
 
             foreach (GameObject obj in DissolveObjects)

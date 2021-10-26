@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
     {
         OS.Explode();
         AquariumFall();
+        StationFall();
     }
 
     public void AquariumCollapse()
@@ -110,5 +111,10 @@ public class GameManager : MonoBehaviour
     public void PreventAquariumSpawn()
     {
         GameObject.FindObjectOfType<WaterAnimationTrigger>().gameObject.SetActive(false);
+    }
+
+    public void StationFall()
+    {
+        GameObject.FindObjectOfType<StationPlatform>().gameObject.GetComponent<Animator>().SetBool("StationCrush", true);
     }
 }
