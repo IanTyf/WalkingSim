@@ -17,7 +17,7 @@ public class MemoryFade : MonoBehaviour
 
     public void ColorLerp() 
     {
-         Color color = Color.Lerp(MemoryMat.color,TargetColor,LerpSpeed);
+         Color color = Color.Lerp(MemoryMat.color,TargetColor,LerpSpeed * Time.deltaTime);
         //MemoryMat.SetColor ("_Base Map",color);
         MemoryMat.color = color;
     }

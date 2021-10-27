@@ -6,7 +6,7 @@ public class RoadTrigger : MonoBehaviour
 {
     //opublic Material roadMat;
     public GameObject road;
-
+    public Animator clock;
     //private bool dissolve;
 
     //public float dissolveSpeed;
@@ -45,6 +45,8 @@ public class RoadTrigger : MonoBehaviour
         if (other.name == "Player")
         {
             road.GetComponent<DissolveMaterialSwap>().Active();
+
+            if (clock != null) clock.SetTrigger("ClockStart");
 
             if (!audioStarted && audio != null)
             {

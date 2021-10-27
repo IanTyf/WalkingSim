@@ -87,11 +87,14 @@ public class FloorBastion : MonoBehaviour
 
     public void ActiveReverse()
     {
+        /*
         if (Delay == 0) deactive = true;
         else
         {
             StartCoroutine(WaitAndDeactive(Delay));
         }
+        */
+        deactive = true;
     }
 
     IEnumerator WaitAndDeactive(float waitTime)
