@@ -22,7 +22,7 @@ public class WaterLerp : MonoBehaviour
     void LerpAlph() 
     {
 
-        float New_Float = Mathf.Lerp(StartAlpha, TargetAlpha, LerpSpeed);
+        float New_Float = Mathf.Lerp(StartAlpha, TargetAlpha, LerpSpeed * Time.deltaTime);
         Rend.material.SetFloat("_Transparency", New_Float);
         StartAlpha = New_Float;
     }
