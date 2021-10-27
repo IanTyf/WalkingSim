@@ -48,7 +48,7 @@ public class CafeTrigger : MonoBehaviour
 
             foreach (GameObject obj in BastionObjects)
             {
-                if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station") && (obj.tag != "FinalStairs")) obj.GetComponent<BastionMaterialSwap>().Active();
+                if ((obj.tag != "road") && (obj.tag != "Fence") && (obj.tag != "Station") && (obj.tag != "FinalStairs") && (obj.tag != "AquaSeat")) obj.GetComponent<BastionMaterialSwap>().Active();
             }
         }
     }

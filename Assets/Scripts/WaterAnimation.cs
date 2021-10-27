@@ -10,13 +10,13 @@ public class WaterAnimation : MonoBehaviour
     public Vector3 End_Position;
     public float Delay_Time;
     private bool Anim_Start = false;
-    public float Move_Speed = 0.01f;
+    public float Move_Speed = 1.8f;
 
 
     void LerpPosition() 
     {
         
-        Vector3 New_Position = Vector3.Lerp(transform.localPosition, End_Position, Move_Speed);
+        Vector3 New_Position = Vector3.Lerp(transform.localPosition, End_Position, Move_Speed * Time.deltaTime);
         transform.localPosition = New_Position;
         
     }

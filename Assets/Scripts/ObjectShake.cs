@@ -65,11 +65,16 @@ public class ObjectShake : MonoBehaviour
     {
         foreach (GameObject obj in objs)
         {
-            Rigidbody rb = obj.AddComponent<Rigidbody>();
-            if (obj.tag != "Pillar" && obj.tag != "Skylight") rb.useGravity = false;
-            rb.AddExplosionForce(1000, new Vector3(-1.3f, 7.4f, -55.81f), 25f);
-            if (obj.tag == "Ceiling") rb.AddForceAtPosition(new Vector3(10, 10, 0), transform.position, ForceMode.Impulse);
-            //if (obj.tag == "Skylight") rb.useGravity = true;
+            if (obj != null)
+            {
+                Rigidbody rb;
+                if (obj.GetComponent<Rigidbody>() != null) rb = obj.GetComponent<Rigidbody>();
+                else rb = obj.AddComponent<Rigidbody>();
+                if (obj.tag != "Pillar" && obj.tag != "Skylight") rb.useGravity = false;
+                rb.AddExplosionForce(1000, new Vector3(-1.3f, 7.4f, -55.81f), 25f);
+                if (obj.tag == "Ceiling") rb.AddForceAtPosition(new Vector3(10, 10, 0), transform.position, ForceMode.Impulse);
+                //if (obj.tag == "Skylight") rb.useGravity = true;
+            }
         }
     }
 

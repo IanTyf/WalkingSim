@@ -26,10 +26,12 @@ public class DestroyPrevious : MonoBehaviour
             if (sceneNum == 1)
             {
                 GameObject.FindObjectOfType<ObjectShake>().Break();
+                GameObject.FindObjectOfType<GameManager>().cafeShouldCrush = false;
             }
             else if (sceneNum == 2)
             {
                 GameObject.FindObjectOfType<GameManager>().AquariumCollapse();
+                GameObject.FindObjectOfType<GameManager>().aquaShouldCrush = false;
                 foreach (GameObject obj in roads)
                 {
                     if (obj != null)
@@ -45,7 +47,7 @@ public class DestroyPrevious : MonoBehaviour
 
     IEnumerator destroyFloor()
     {
-        yield return new WaitForSeconds(35f);
+        yield return new WaitForSeconds(33.3f);
         GameObject.FindObjectOfType<GameManager>().AquariumFall();
     }
 }

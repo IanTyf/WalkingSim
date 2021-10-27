@@ -22,7 +22,7 @@ public class PlayAudio : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            ao.Play();
+            if (!ao.isPlaying) ao.Play();
         }
     }
 }

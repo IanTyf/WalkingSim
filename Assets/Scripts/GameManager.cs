@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     private bool trainSpawned;
     public bool shouldSpawn;
     public bool aquaShouldCrush;
+    public bool cafeShouldCrush;
 
     private bool trainRidePlayed;
 
@@ -51,6 +52,8 @@ public class GameManager : MonoBehaviour
         trainSpawned = false;
         shouldSpawn = false;
         trainRidePlayed = false;
+
+        cafeShouldCrush = true;
     }
 
     // Update is called once per frame
@@ -88,15 +91,15 @@ public class GameManager : MonoBehaviour
 
     public void TriggerStartCollapse()
     {
-        OS.Shake();
+        if (cafeShouldCrush) OS.Shake();
         if (aquaShouldCrush) AquariumCollapse();
         PreventAquariumSpawn();
     }
 
     public void TriggerCollapse()
     {
-        OS.Explode();
-        AquariumFall();
+        if (cafeShouldCrush) OS.Explode();
+        if (aquaShouldCrush) AquariumFall();
         //StationFall();
         StationExplode();
         DestroyRoadObjs();
@@ -115,6 +118,7 @@ public class GameManager : MonoBehaviour
     {
         GameObject.FindObjectOfType<BastionFloorTrigger>().floorCrush();
         GameObject.FindObjectOfType<BastionFloorTrigger>().FenceCrush();
+        GameObject.FindObjectOfType<BastionFloorTrigger>().SeatsCrush();
     }
 
     public void PreventAquariumSpawn()

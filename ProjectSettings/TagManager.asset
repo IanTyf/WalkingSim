@@ -18,6 +18,7 @@ TagManager:
   - Important
   - FinalStairs
   - StationExplode
+  - AquaSeat
   layers:
   - Default
   - TransparentFX
