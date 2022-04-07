@@ -42,6 +42,7 @@ public class ObjectShake : MonoBehaviour
             shakeAmplifySpeed += 0.04f;
         }
 
+        /*
         if (Input.GetMouseButtonDown(1)) {
             shake = false;
             Break();
@@ -50,7 +51,7 @@ public class ObjectShake : MonoBehaviour
         {
             shake = true;
         }
-        
+        */
     }
 
     private void shakePosition(GameObject obj, int i)
@@ -60,15 +61,20 @@ public class ObjectShake : MonoBehaviour
             objsPos[i].z + Random.Range(shakeAmount.x, shakeAmount.y) * shakeAmplify);
     }
 
-    private void Break()
+    public void Break()
     {
         foreach (GameObject obj in objs)
         {
-            Rigidbody rb = obj.AddComponent<Rigidbody>();
-            if (obj.tag != "Pillar" && obj.tag != "Skylight") rb.useGravity = false;
-            rb.AddExplosionForce(1000, new Vector3(-1.3f, 7.4f, -55.81f), 25f);
-            if (obj.tag == "Ceiling") rb.AddForceAtPosition(new Vector3(10, 10, 0), transform.position, ForceMode.Impulse);
-            //if (obj.tag == "Skylight") rb.useGravity = true;
+            if (obj != null)
+            {
+                Rigidbody rb;
+                if (obj.GetComponent<Rigidbody>() != null) rb = obj.GetComponent<Rigidbody>();
+                else rb = obj.AddComponent<Rigidbody>();
+                if (obj.tag != "Pillar" && obj.tag != "Skylight") rb.useGravity = false;
+                rb.AddExplosionForce(1000, new Vector3(-1.3f, 7.4f, -55.81f), 25f);
+                if (obj.tag == "Ceiling") rb.AddForceAtPosition(new Vector3(10, 10, 0), transform.position, ForceMode.Impulse);
+                //if (obj.tag == "Skylight") rb.useGravity = true;
+            }
         }
     }
 

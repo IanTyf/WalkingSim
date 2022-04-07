@@ -21,14 +21,14 @@ public class GradientSwapTrigger : MonoBehaviour
         {
             Color currentTCol = mat.GetColor("_TopColor");
             Vector4 newColVec = Vector4.Lerp(new Vector4(currentTCol.r, currentTCol.g, currentTCol.b, currentTCol.a),
-                new Vector4(tCol.r, tCol.g, tCol.b, tCol.a), 0.01f); ;
+                new Vector4(tCol.r, tCol.g, tCol.b, tCol.a), 2f * Time.deltaTime); ;
             Color newTCol = new Color(newColVec.x, newColVec.y, newColVec.z, newColVec.w);
             mat.SetColor("_TopColor", newTCol);
 
 
             Color currentBCol = mat.GetColor("_BottomColor");
             Vector4 newColVec2 = Vector4.Lerp(new Vector4(currentBCol.r, currentBCol.g, currentBCol.b, currentBCol.a),
-                new Vector4(bCol.r, bCol.g, bCol.b, bCol.a), 0.01f); ;
+                new Vector4(bCol.r, bCol.g, bCol.b, bCol.a), 2f * Time.deltaTime); ;
             Color newBCol = new Color(newColVec2.x, newColVec2.y, newColVec2.z, newColVec2.w);
             mat.SetColor("_BottomColor", newBCol);
 

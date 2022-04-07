@@ -27,7 +27,7 @@ public class CafeSkyboxTrigger : MonoBehaviour
         {
             Color currentCol = cam.backgroundColor;
             Vector4 newColVec = Vector4.Lerp(new Vector4(currentCol.r, currentCol.g, currentCol.b, currentCol.a),
-                new Vector4(TargetColor.x/255f, TargetColor.y/255f, TargetColor.z/255f, TargetColor.w/255f), 0.005f);
+                new Vector4(TargetColor.x/255f, TargetColor.y/255f, TargetColor.z/255f, TargetColor.w/255f), 1f * Time.deltaTime);
             cam.backgroundColor = new Color(newColVec.x, newColVec.y, newColVec.z, newColVec.w);
 
             if (Vector4.Distance(newColVec, new Vector4(currentCol.r, currentCol.g, currentCol.b, currentCol.a)) < 0.00001f)

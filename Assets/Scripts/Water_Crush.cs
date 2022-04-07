@@ -27,7 +27,7 @@ public class Water_Crush : MonoBehaviour
 
         if (Cube.tag == "CenterWaterCube")
         {
-            Cube.GetComponent<Rigidbody>().AddForce(transform.up * 3, ForceMode.Impulse);
+            Cube.GetComponent<Rigidbody>().AddForce(transform.up * 4, ForceMode.Impulse);
         }
         else 
         {

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     private ObjectShake OS;
 
     public Material outlineMat;
+    public Material gradientMat;
 
     private Water_Crush[] WaterCrushes;
     public GameObject WaterPortal;
@@ -26,14 +27,20 @@ public class GameManager : MonoBehaviour
     private bool trainSpawned;
     public bool shouldSpawn;
     public bool aquaShouldCrush;
+    public bool cafeShouldCrush;
 
     private bool trainRidePlayed;
+
+    public GameObject[] objsToDestroy;
 
     // Start is called before the first frame update
     void Start()
     {
         outlineMat.SetFloat("_NormalsStrength", 1f);
         outlineMat.SetFloat("_NormalsTightening", 1f);
+
+        gradientMat.SetColor("_TopColor", new Color(1, 1, 1, 0));
+        gradientMat.SetColor("_BottomColor", new Color(0, 0, 0, 0));
 
         StartTimerSince15 = false;
         TimerSince15 = 0;
@@ -45,6 +52,8 @@ public class GameManager : MonoBehaviour
         trainSpawned = false;
         shouldSpawn = false;
         trainRidePlayed = false;
+
+        cafeShouldCrush = true;
     }
 
     // Update is called once per frame
@@ -82,16 +91,18 @@ public class GameManager : MonoBehaviour
 
     public void TriggerStartCollapse()
     {
-        OS.Shake();
+        if (cafeShouldCrush) OS.Shake();
         if (aquaShouldCrush) AquariumCollapse();
         PreventAquariumSpawn();
     }
 
     public void TriggerCollapse()
     {
-        OS.Explode();
-        AquariumFall();
-        StationFall();
+        if (cafeShouldCrush) OS.Explode();
+        if (aquaShouldCrush) AquariumFall();
+        //StationFall();
+        StationExplode();
+        DestroyRoadObjs();
     }
 
     public void AquariumCollapse()
@@ -106,6 +117,8 @@ public class GameManager : MonoBehaviour
     public void AquariumFall()
     {
         GameObject.FindObjectOfType<BastionFloorTrigger>().floorCrush();
+        GameObject.FindObjectOfType<BastionFloorTrigger>().FenceCrush();
+        GameObject.FindObjectOfType<BastionFloorTrigger>().SeatsCrush();
     }
 
     public void PreventAquariumSpawn()
@@ -116,5 +129,24 @@ public class GameManager : MonoBehaviour
     public void StationFall()
     {
         GameObject.FindObjectOfType<StationPlatform>().gameObject.GetComponent<Animator>().SetBool("StationCrush", true);
+    }
+
+    public void DestroyRoadObjs()
+    {
+        foreach (GameObject obj in objsToDestroy)
+        {
+            Destroy(obj);
+        }
+    }
+
+    public void StationExplode()
+    {
+        GameObject[] stationObjs = GameObject.FindGameObjectsWithTag("StationExplode");
+        foreach (GameObject obj in stationObjs)
+        {
+            Rigidbody rb = obj.AddComponent<Rigidbody>();
+            rb.useGravity = false;
+            rb.AddExplosionForce(1000f, new Vector3(-20f, -15f, 238f), 50);
+        }
     }
 }

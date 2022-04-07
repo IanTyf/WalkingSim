@@ -30,7 +30,9 @@ public class ParticleMovement : MonoBehaviour
         if (checkpoint == 11)
         {
             Destroy(this.gameObject);
+            //transform.position = new Vector3(-32.95f, -14.929f, 4477.08f);
         }
+
 
         //transform.position = Vector3.Lerp(transform.position, stops[checkpoint], 0.003f);
         transform.position = Vector3.MoveTowards(transform.position, stops[checkpoint], speed * Time.deltaTime);
